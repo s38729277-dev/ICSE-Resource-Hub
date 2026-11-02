@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10233f">
+<meta name="description" content="A lightweight private ICSE Class 10 study hub.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<title>ICSE Resource Hub</title>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="ICSE Resource Hub home"><span class="logo">IH</span><span><b>ICSE Resource Hub</b><small>Class 10 · Private group</small></span></a>
+  <button id="installBtn" class="install hidden">Install app</button>
+</header>
+<main>
+<section id="home" class="page active">
+  <div class="hero">
+    <p class="eyebrow">MISSION 99 · PRIVATE STUDY SPACE</p>
+    <h1>Study smarter.<br><span>Stay prepared.</span></h1>
+    <p>A lightweight study hub for your group. Open it like a webpage or add it to your phone's home screen.</p>
+    <div class="hero-stats"><div><b>10</b><small>Subjects</small></div><div><b>Chapter-wise</b><small>Organisation</small></div><div><b>Low data</b><small>By design</small></div></div>
+  </div>
+  <div class="section-title"><h2>Your subjects</h2><small>Choose to explore</small></div>
+  <div id="subjects" class="subject-grid"></div>
+  <div class="section-title"><h2>Quick access</h2></div>
+  <div class="quick-grid">
+    <button class="quick" data-page="resources"><span>▤</span><b>Resource library</b><small>Official links and notes</small></button>
+    <button class="quick" data-page="saved"><span>☆</span><b>Saved chapters</b><small>Your bookmarks</small></button>
+    <button class="quick" data-page="tests"><span>◷</span><b>Mock tests</b><small>Practice area</small></button>
+  </div>
+</section>
+
+<section id="subject" class="page">
+  <button class="back" data-page="home">← All subjects</button>
+  <p class="eyebrow">SUBJECT</p><h1 id="subjectName" class="page-heading"></h1>
+  <p class="muted">Choose a chapter to open its study resources.</p>
+  <div id="chapters" class="stack"></div>
+</section>
+
+<section id="chapter" class="page">
+  <button class="back" data-page="subject">← Back to chapters</button>
+  <p class="eyebrow" id="chapterSubject"></p><h1 id="chapterName" class="page-heading"></h1>
+  <p class="muted">Chapter resources will appear here, organised by source.</p>
+  <div class="section-title"><h2>Study material</h2><small>View or download separately</small></div>
+  <div id="chapterFiles" class="stack"></div>
+  <div class="notice"><b>Content status</b><p>This is the working webpage structure. Verified question sets, PYQs, specimen questions and chapter PDFs still need to be added.</p></div>
+  <button id="saveChapter" class="primary full">☆ Save chapter</button>
+</section>
+
+<section id="resources" class="page">
+  <button class="back" data-page="home">← Home</button>
+  <p class="eyebrow">LIBRARY</p><h1 class="page-heading">Resource library</h1>
+  <p class="muted">These open the original source only when you choose them.</p>
+  <a class="resource" href="https://cisce.org/" target="_blank" rel="noopener"><b>Official CISCE website</b><small>Syllabus, specimen papers and official updates ↗</small></a>
+  <a class="resource" href="https://oswaalbooks.com/pages/free-resources-cisce-class-10" target="_blank" rel="noopener"><b>Oswaal free ICSE resources</b><small>Revision resources and study material ↗</small></a>
+  <a class="resource" href="https://cisce.org/analysis-of-pupil-performance-icse-2025/" target="_blank" rel="noopener"><b>CISCE Pupil Analysis 2025</b><small>Official examiner analysis ↗</small></a>
+  <div class="notice"><b>PDF controls</b><p>When a PDF is added to a chapter, it will have two separate actions: View PDF opens the viewer; Download saves a copy to the device.</p></div>
+</section>
+
+<section id="pdfviewer" class="page">
+  <button class="back" data-page="chapter">← Back to chapter</button>
+  <div class="viewer-head"><div><p class="eyebrow">PDF VIEWER</p><h1 id="pdfTitle" class="page-heading">Document</h1></div><a id="pdfOpenNew" class="text-link" target="_blank" rel="noopener">Open in browser ↗</a></div>
+  <div class="pdf-frame-wrap"><iframe id="pdfFrame" title="PDF document viewer" loading="lazy"></iframe></div>
+  <p class="muted tiny">The PDF is displayed in the browser viewer. Use the separate Download button on the chapter page if you want to save a copy.</p>
+</section>
+
+<section id="tests" class="page">
+  <button class="back" data-page="home">← Home</button>
+  <p class="eyebrow">PRACTICE</p><h1 class="page-heading">Mock tests</h1>
+  <div class="notice"><b>Test engine to be added</b><p>Timed tests will be enabled only after the official 2027 specimen pattern, duration, questions and marking schemes are verified for each subject.</p></div>
+</section>
+
+<section id="saved" class="page">
+  <button class="back" data-page="home">← Home</button>
+  <p class="eyebrow">ON THIS DEVICE</p><h1 class="page-heading">Saved chapters</h1>
+  <p class="muted">Bookmarks stay in this browser on this phone.</p>
+  <div id="savedList" class="stack"></div>
+</section>
+</main>
+<nav class="bottom-nav">
+  <button class="nav active" data-page="home"><span>⌂</span>Home</button>
+  <button class="nav" data-page="resources"><span>▤</span>Resources</button>
+  <button class="nav" data-page="tests"><span>◷</span>Tests</button>
+  <button class="nav" data-page="saved"><span>☆</span>Saved</button>
+</nav>
+<footer>ICSE Resource Hub · Private group edition</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
